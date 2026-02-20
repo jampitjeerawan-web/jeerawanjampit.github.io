@@ -1,1 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: #e0e0e0;
+    }
+
+    /* NAV */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: #111;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    nav .logo { font-size: 1.4rem; font-weight: 700; color: #7f5af0; }
+    nav ul { list-style: none; display: flex; gap: 1.5rem; }
+    nav ul a { color: #ccc; text-decoration: none; transition: color 0.2s; }
+    nav ul a:hover { color: #7f5af0; }
+
+    /* HERO */
+    #hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f 60%, #1a1030);
+      padding: 2rem;
+    }
+    #hero h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    #hero h1 span { color: #7f5af0; }
+    #hero p { font-size: 1.2rem; color: #aaa; margin-bottom: 1.5rem; }
+    .btn {
+      padding: 0.75rem 2rem;
+      background: #7f5af0;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #6344d4; }
+
+    /* SECTIONS */
+    section { padding: 5rem 2rem; max-width: 900px; margin: auto; }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #7f5af0;
+      border-bottom: 2px solid #7f5af0;
+      padding-bottom: 0.5rem;
+      display: inline-block;
+    }
+
+    /* ABOUT */
+    #about p { font-size: 1.1rem; line-height: 1.8; color: #bbb; }
+
+    /* SKILLS */
+    .skills-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+    .skill-tag {
+      background: #1e1e2e;
+      border: 1px solid #7f5af0;
+      color: #c9b1ff;
+      padding: 0.4rem 1rem;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    /* PROJECTS */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a4a;
+      border-radius: 12px;
+      padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+    .card:hover { transform: translateY(-4px); border-color: #7f5af0; }
+    .card h3 { margin-bottom: 0.5rem; color: #fff; }
+    .card p { color: #aaa; font-size: 0.9rem; margin-bottom: 1rem; }
+    .card a { color: #7f5af0; font-size: 0.9rem; text-decoration: none; }
+    .card a:hover { text-decoration: underline; }
+
+    /* CONTACT */
+    #contact p { color: #bbb; margin-bottom: 1rem; }
+    .contact-links { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .contact-links a {
+      color: #7f5af0;
+      text-decoration: none;
+      border: 1px solid #7f5af0;
+      padding: 0.5rem 1.2rem;
+      border-radius: 8px;
+      transition: background 0.2s;
+    }
+    .contact-links a:hover { background: #7f5af022; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      color: #555;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="logo">YourName</div>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <h1>Hi, I'm <span>Your Name</span> 👋</h1>
+    <p>Full Stack Developer · Open Source Enthusiast · Problem Solver</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I'm a passionate developer with experience building modern web applications.
+      I love solving complex problems with clean, efficient code and enjoy
+      collaborating on exciting open-source projects.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="skill-tag">HTML & CSS</span>
+      <span class="skill-tag">JavaScript</span>
+      <span class="skill-tag">React</span>
+      <span class="skill-tag">Node.js</span>
+      <span class="skill-tag">Python</span>
+      <span class="skill-tag">Git & GitHub</span>
+      <span class="skill-tag">REST APIs</span>
+      <span class="skill-tag">SQL</span>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+
+      <div class="card">
+        <h3>🚀 Project One</h3>
+        <p>A web app that does something awesome. Built with React and Node.js.</p>
+        <a href="https://github.com/yourusername/project-one" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>📊 Project Two</h3>
+        <p>A data visualization dashboard using Python and D3.js.</p>
+        <a href="https://github.com/yourusername/project-two" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <h3>🎮 Project Three</h3>
+        <p>A browser-based game built with vanilla JavaScript and Canvas API.</p>
+        <a href="https://github.com/yourusername/project-three" target="_blank">View on GitHub →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Interested in working together or just want to say hi? Reach out!</p>
+    <div class="contact-links">
+      <a href="mailto:you@email.com">📧 Email</a>
+      <a href="https://github.com/yourusername" target="_blank">🐙 GitHub</a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">💼 LinkedIn</a>
+      <a href="https://twitter.com/yourusername" target="_blank">🐦 Twitter</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Your Name · Built with ❤️ and hosted on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>
